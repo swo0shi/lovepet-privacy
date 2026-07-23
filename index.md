@@ -1,6 +1,6 @@
 # Informativa sulla privacy di Lovepet / Lovepet Privacy Policy
 
-_Ultimo aggiornamento / last updated: 21 luglio 2026_
+_Ultimo aggiornamento / last updated: 23 luglio 2026_
 
 ---
 
@@ -57,9 +57,13 @@ connessioni cifrate (HTTPS/TLS).
 ### Conservazione e cancellazione
 
 Disinstallare l'app non cancella automaticamente i dati salvati sui
-server. Puoi richiedere in qualsiasi momento la cancellazione completa dei
-dati della tua coppia scrivendo all'indirizzo di contatto sopra indicato:
-la richiesta viene evasa entro 30 giorni.
+server. Puoi cancellare in qualsiasi momento e in autonomia tutti i dati
+della tua coppia direttamente dall'app, dalle **Impostazioni → Elimina i
+dati della coppia**: l'operazione è irreversibile, richiede una doppia
+conferma e cancella immediatamente i dati di entrambi i partner dai
+nostri server (pet, interazioni, diario, statistiche e traguardi). In
+alternativa puoi sempre richiederla scrivendo all'indirizzo di contatto
+sopra indicato: la richiesta viene evasa entro 30 giorni.
 
 ### Minori
 
@@ -119,9 +123,13 @@ All transmission uses encrypted connections (HTTPS/TLS).
 ### Retention and deletion
 
 Uninstalling the app does not automatically delete the data stored on the
-servers. You can request complete deletion of your couple's data at any
-time by writing to the contact address above; requests are honoured within
-30 days.
+servers. You can delete all of your couple's data yourself, at any time,
+directly from the app: **Settings → Delete couple data**. This is
+irreversible, requires a double confirmation, and immediately deletes
+both partners' data from our servers (pet, interactions, diary,
+statistics and milestones). You can also always request deletion by
+writing to the contact address above; requests are honoured within 30
+days.
 
 ### Children
 
