@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lovepet — Eliminazione account / Account deletion</title>
+  <meta name="description" content="Come eliminare il tuo account Lovepet e tutti i dati collegati / How to delete your Lovepet account and all linked data.">
+  <meta name="theme-color" content="#FAF6F0">
+  <style>
+    :root {
+      --linen: #FAF6F0;
+      --card: #FFFDF9;
+      --ink: #3B261C;
+      --ink-soft: #6E5446;
+      --terracotta: #C86D51;
+      --terracotta-dark: #A9543B;
+      --line: #EADFD2;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+    body {
+      margin: 0;
+      background: var(--linen);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-text-size-adjust: 100%;
+    }
+    .topbar {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(250, 246, 240, 0.94);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid var(--line);
+    }
+    .topbar-inner {
+      max-width: 760px; margin: 0 auto; padding: 12px 20px;
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    }
+    .brand { font-weight: 700; font-size: 18px; color: var(--ink); text-decoration: none; letter-spacing: 0.2px; }
+    .brand span { color: var(--terracotta); }
+    .lang { display: flex; gap: 4px; background: var(--card); border: 1px solid var(--line); border-radius: 999px; padding: 3px; }
+    .lang a {
+      color: var(--ink-soft); text-decoration: none; font-size: 14px; font-weight: 600;
+      padding: 6px 14px; border-radius: 999px;
+    }
+    .lang a:hover, .lang a:focus-visible { background: var(--terracotta); color: #fff; outline: none; }
+    main { max-width: 760px; margin: 0 auto; padding: 24px 16px 48px; }
+    .card {
+      background: var(--card); border: 1px solid var(--line); border-radius: 20px;
+      padding: 28px 24px; margin-bottom: 24px;
+      box-shadow: 0 6px 20px rgba(59, 38, 28, 0.06);
+    }
+    h1 { font-size: 26px; line-height: 1.25; margin: 0 0 6px; }
+    h2 { font-size: 21px; margin: 0 0 4px; color: var(--terracotta-dark); }
+    h3 { font-size: 17px; margin: 28px 0 8px; }
+    p, ul, ol { margin: 0 0 12px; }
+    ul { padding-left: 22px; }
+    li { margin-bottom: 6px; }
+    a { color: var(--terracotta-dark); }
+    .meta { color: var(--ink-soft); font-size: 14px; margin: 0; }
+    .meta strong { color: var(--ink); }
+    .steps { list-style: none; padding: 0; counter-reset: step; }
+    .steps li {
+      counter-increment: step; position: relative;
+      padding: 2px 0 2px 44px; margin-bottom: 14px;
+    }
+    .steps li::before {
+      content: counter(step);
+      position: absolute; left: 0; top: 0;
+      width: 30px; height: 30px; border-radius: 50%;
+      background: var(--terracotta); color: #fff; font-weight: 700; font-size: 15px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .path {
+      display: inline-block; background: var(--linen); border: 1px solid var(--line);
+      border-radius: 8px; padding: 0 8px; font-weight: 600; white-space: nowrap;
+    }
+    .callout {
+      background: var(--linen); border-left: 4px solid var(--terracotta);
+      border-radius: 12px; padding: 14px 16px; margin: 16px 0;
+    }
+    .callout p:last-child { margin-bottom: 0; }
+    .btn {
+      display: inline-block; background: var(--terracotta); color: #fff; text-decoration: none;
+      font-weight: 600; padding: 12px 22px; border-radius: 999px; text-align: center;
+    }
+    .btn:hover, .btn:focus-visible { background: var(--terracotta-dark); color: #fff; }
+    .small { font-size: 14px; color: var(--ink-soft); }
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; font-size: 15px; margin-bottom: 12px; }
+    th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+    th { color: var(--ink-soft); font-weight: 600; font-size: 14px; }
+    footer { text-align: center; color: var(--ink-soft); font-size: 13px; padding: 0 16px 32px; }
+    @media (min-width: 640px) {
+      main { padding-top: 36px; }
+      .card { padding: 36px 40px; }
+      h1 { font-size: 30px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#top">Love<span>pet</span></a>
+      <nav class="lang" aria-label="Lingua / Language">
+        <a href="#it" hreflang="it">Italiano</a>
+        <a href="#en" hreflang="en">English</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="card">
+      <h1>Eliminazione account Lovepet<br>Lovepet account deletion</h1>
+      <p class="meta">App: <strong>Lovepet</strong> · Sviluppatore indipendente / Independent developer: <a href="mailto:sephy97@gmail.com">sephy97@gmail.com</a></p>
+      <p class="meta">Ultimo aggiornamento: 25 novembre 2026 · Last updated: 25 November 2026</p>
+    </div>
+
+    <!-- ============================ ITALIANO ============================ -->
+    <section class="card" id="it" lang="it">
+      <h2>Italiano</h2>
+      <p>Questa pagina spiega come eliminare il tuo account <strong>Lovepet</strong> e tutti i dati collegati, sviluppata e distribuita da un singolo sviluppatore indipendente (<a href="mailto:sephy97@gmail.com">sephy97@gmail.com</a>).</p>
+
+      <h3>Opzione 1 — Direttamente dall'app (immediata)</h3>
+      <ol class="steps">
+        <li>Apri l'app <strong>Lovepet</strong> sul tuo telefono.</li>
+        <li>Vai in <span class="path">Impostazioni → Elimina account</span>.</li>
+        <li>Tocca <strong>Elimina account</strong> e leggi il riepilogo di cosa verrà cancellato.</li>
+        <li>Conferma una prima volta, poi conferma di nuovo con <strong>Elimina il mio account</strong> (doppia conferma, per evitare cancellazioni accidentali).</li>
+      </ol>
+      <p>L'eliminazione è <strong>immediata e irreversibile</strong>: account e dati non si possono più recuperare, nemmeno con l'accesso Google.</p>
+
+      <h3>Opzione 2 — Via email (se hai disinstallato l'app o non sei accoppiato)</h3>
+      <p>Se non hai più l'app installata, non riesci ad aprirla o non sei ancora accoppiato con un partner, puoi chiedere l'eliminazione scrivendo a <a href="mailto:sephy97@gmail.com">sephy97@gmail.com</a>. Per aiutarci a trovare il tuo account indica il nome del tuo pet, il nome visualizzato (se impostato), il nome del pet del partner (se accoppiato) e l'email Google collegata (se presente).</p>
+      <p><a class="btn" href="mailto:sephy97@gmail.com?subject=Richiesta%20eliminazione%20account%20Lovepet&amp;body=Ciao%2C%0Achiedo%20l%27eliminazione%20del%20mio%20account%20Lovepet%20e%20di%20tutti%20i%20dati%20collegati.%0A%0ANome%20del%20mio%20pet%3A%20%0ANome%20visualizzato%20(se%20impostato)%3A%20%0ANome%20del%20pet%20del%20partner%20(se%20accoppiato)%3A%20%0AEmail%20Google%20collegata%20(se%20presente)%3A%20%0A%0AGrazie">Richiedi l'eliminazione via email</a></p>
+      <p class="small">La richiesta viene evasa <strong>entro 30 giorni</strong>; riceverai una conferma via email a eliminazione completata.</p>
+
+      <h3>Quali dati vengono eliminati</h3>
+      <ul>
+        <li><strong>Account Firebase Authentication</strong>: la tua identità anonima ed eventuale collegamento con Google Sign-In (email e UID Google);</li>
+        <li><strong>Pet</strong>: specie, nome, colore, accessorio, umore, nome visualizzato, ultimo accesso / presenza;</li>
+        <li><strong>Token FCM</strong> del dispositivo usato per notifiche push e aggiornamenti del Widget Android;</li>
+        <li><strong>Coppia</strong>: il collegamento con il partner, data di collegamento e anniversario, codici invito;</li>
+        <li><strong>Diario</strong>: tutte le note (private e condivise) e le reazioni a cuore;</li>
+        <li><strong>Viaggi e cartoline</strong>: risposte quotidiane sigillate, cartoline di coppia, mete visitate e ritmo settimanale;</li>
+        <li><strong>Souvenir e casa</strong>: souvenir raccolti e arredo delle stanze;</li>
+        <li><strong>Interazioni, statistiche e traguardi</strong>.</li>
+      </ul>
+      <div class="callout">
+        <p><strong>Attenzione:</strong> una coppia non può esistere senza uno dei due partner. Eliminando il tuo account vengono cancellati anche tutti i <strong>dati condivisi della coppia</strong>, per entrambi; il tuo partner troverà il collegamento chiuso.</p>
+      </div>
+
+      <h3>Tempi di conservazione</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Modalità</th><th>Quando vengono eliminati i dati</th></tr></thead>
+          <tbody>
+            <tr><td>Dall'app (<span class="path">Impostazioni → Elimina account</span>)</td><td>Subito, al momento della conferma</td></tr>
+            <tr><td>Via email a sephy97@gmail.com</td><td>Entro 30 giorni dalla richiesta</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p><strong>Nessun dato viene conservato</strong> dopo l'eliminazione: non resta alcuna copia di backup sui nostri server.</p>
+
+      <p>Per maggiori dettagli leggi l'<a href="privacy-policy.html#it">Informativa sulla privacy</a>.</p>
+    </section>
+
+    <!-- ============================ ENGLISH ============================= -->
+    <section class="card" id="en" lang="en">
+      <h2>English</h2>
+      <p>This page explains how to delete your <strong>Lovepet</strong> account and all linked data. Lovepet is built and published by a single independent developer (<a href="mailto:sephy97@gmail.com">sephy97@gmail.com</a>).</p>
+
+      <h3>Option 1 — Directly in the app (immediate)</h3>
+      <ol class="steps">
+        <li>Open the <strong>Lovepet</strong> app on your phone.</li>
+        <li>Go to <span class="path">Settings → Delete account</span>.</li>
+        <li>Tap <strong>Delete account</strong> and read the summary of what will be erased.</li>
+        <li>Confirm once, then confirm again with <strong>Delete my account</strong> (double confirmation, to prevent accidental deletion).</li>
+      </ol>
+      <p>Deletion is <strong>immediate and irreversible</strong>: your account and data cannot be recovered, not even with Google sign-in.</p>
+
+      <h3>Option 2 — By email (if you uninstalled the app or are not paired)</h3>
+      <p>If you no longer have the app installed, cannot open it, or are not paired with a partner yet, you can request deletion by writing to <a href="mailto:sephy97@gmail.com">sephy97@gmail.com</a>. To help us find your account, please include your pet's name, your display name (if set), your partner's pet name (if paired) and your linked Google email (if any).</p>
+      <p><a class="btn" href="mailto:sephy97@gmail.com?subject=Lovepet%20account%20deletion%20request&amp;body=Hi%2C%0AI%20would%20like%20my%20Lovepet%20account%20and%20all%20linked%20data%20to%20be%20deleted.%0A%0AMy%20pet%27s%20name%3A%20%0ADisplay%20name%20(if%20set)%3A%20%0APartner%27s%20pet%20name%20(if%20paired)%3A%20%0ALinked%20Google%20email%20(if%20any)%3A%20%0A%0AThank%20you">Request deletion by email</a></p>
+      <p class="small">Requests are honoured <strong>within 30 days</strong>; you will receive an email confirmation once deletion is complete.</p>
+
+      <h3>What data is deleted</h3>
+      <ul>
+        <li><strong>Firebase Authentication account</strong>: your anonymous identity and any linked Google Sign-In (Google email and UID);</li>
+        <li><strong>Pet</strong>: species, name, colour, accessory, mood, display name, last access / presence;</li>
+        <li>The device's <strong>FCM token</strong> used for push notifications and Android widget updates;</li>
+        <li><strong>Couple</strong>: the link with your partner, pairing and anniversary dates, invite codes;</li>
+        <li><strong>Diary</strong>: all notes (private and shared) and heart reactions;</li>
+        <li><strong>Trips and postcards</strong>: sealed daily answers, the couple's postcards, visited destinations and weekly rhythm;</li>
+        <li><strong>Souvenirs and home</strong>: collected souvenirs and room furnishing;</li>
+        <li><strong>Interactions, statistics and milestones</strong>.</li>
+      </ul>
+      <div class="callout">
+        <p><strong>Please note:</strong> a couple cannot exist without one of its two partners. Deleting your account also erases all of the <strong>couple's shared data</strong>, for both of you; your partner will find the connection closed.</p>
+      </div>
+
+      <h3>Retention</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Method</th><th>When data is deleted</th></tr></thead>
+          <tbody>
+            <tr><td>In the app (<span class="path">Settings → Delete account</span>)</td><td>Immediately, upon confirmation</td></tr>
+            <tr><td>By email to sephy97@gmail.com</td><td>Within 30 days of the request</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p><strong>No data is retained</strong> after deletion: no backup copy remains on our servers.</p>
+
+      <p>For more details, read the <a href="privacy-policy.html#en">Privacy Policy</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    Lovepet · <a href="mailto:sephy97@gmail.com">sephy97@gmail.com</a> · <a href="privacy-policy.html">Informativa sulla privacy / Privacy Policy</a>
+  </footer>
+</body>
+</html>
